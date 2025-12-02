@@ -1,20 +1,4 @@
-/*
-////////////////////////////////////////////////////////////////
 
-Author: Free-Template.co
-Author URL: http://free-template.co.
-License: https://creativecommons.org/licenses/by/3.0/
-License URL: https://creativecommons.org/licenses/by/3.0/
-Site License URL: https://free-template.co/template-license/
-  
-Website:  https://free-template.co
-Facebook: https://www.facebook.com/FreeDashTemplate.co
-Twitter:  https://twitter.com/Free_Templateco
-RSS Feed: https://feeds.feedburner.com/Free-templateco
-
-////////////////////////////////////////////////////////////////
-*/
-/* Base */
 html {
   overflow-x: hidden; }
 
@@ -2070,91 +2054,87 @@ h1, h2, h3, h4, h5,
   }
 }
 
-
-.teach {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .teach .section {
+.teach-container {
             display: flex;
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            padding: 15px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .teach-image-section {
+            width: 320px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 40px;
-            margin-bottom: 60px;
-            background: rgb(255, 255, 255);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .teach .section.reverse {
-            flex-direction: row-reverse;
+        .teach-image-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
-        .teach .video-wrapper {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .teach .video-wrapper iframe {
+        .teach-image-section img {
             width: 100%;
-            height: 400px;
-            border-radius: 8px;
-            border: none;
+            max-width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
         }
-
-        .teach .video-wrapper video {
+        .teach-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .teach-button:hover {
+            background-color: #555;
+        }
+        .teach-video-section {
+            flex: 1;
+            min-width: 300px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .teach-video-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .teach-video-section video {
             width: 100%;
             height: auto;
-            border-radius: 8px;
+            min-height: 250px;
+            border-radius: 5px;
         }
 
-        .teach .text-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .teach .text-content h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-
-        .teach .text-content p {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .teach .text-content a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .teach .text-content a:hover {
-            background-color: #2980b9;
-        }
-
-        
-        @media (max-width: 768px) {
-            .teach .section {
-                flex-direction: column !important;
-                gap: 30px;
+        @media (max-width: 991.98px) {
+            .teach-container {
+                gap: 15px;
             }
+        }
 
-            .teach .video-wrapper iframe {
-                height: 300px;
+        @media (max-width: 767.98px) {
+            .teach-container {
+                flex-direction: column;
             }
-
-            .teach .text-content h2 {
-                font-size: 24px;
+            .teach-image-section,
+            .teach-video-section {
+                width: 100%;
+            }
+            .teach-image-section {
+                order: 1;
+            }
+            .teach-video-section {
+                order: 2;
             }
         }
