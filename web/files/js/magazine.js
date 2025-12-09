@@ -28,9 +28,9 @@ const MAGAZINE_CONFIGS = {
         folder: 'pages/industrial/',
         width: 900, height: 600
     },
-    'technology': { 
-        pages: 10, 
-        folder: 'pages/technology/',
+    'idol': { 
+        pages: 14, 
+        folder: 'pages/idol/',
         width: 900, height: 600
     }
 };
